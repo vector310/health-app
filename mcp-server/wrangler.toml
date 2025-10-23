@@ -1,0 +1,17 @@
+name = "health-tracker-mcp"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "health-tracker-db"
+database_id = "7fd57978-5633-4391-b877-932e1272c24b"
+
+# Environment variables (secrets set via: wrangler secret put API_KEY)
+# [vars]
+# ENVIRONMENT = "production"
+
+# Development settings
+[dev]
+port = 8787

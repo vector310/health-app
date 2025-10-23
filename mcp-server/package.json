@@ -1,0 +1,35 @@
+{
+  "name": "health-tracker-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for personal health tracking with AI-powered analysis",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create health-tracker-db",
+    "db:migrate": "wrangler d1 execute health-tracker-db --file=./src/db/schema.sql",
+    "db:migrate:remote": "wrangler d1 execute health-tracker-db --remote --file=./src/db/schema.sql",
+    "test": "vitest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4",
+    "wrangler": "^3.90.0"
+  },
+  "keywords": [
+    "health",
+    "fitness",
+    "mcp",
+    "cloudflare",
+    "workers"
+  ],
+  "author": "",
+  "license": "MIT"
+}
